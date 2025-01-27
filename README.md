@@ -1,4 +1,4 @@
-# FerothanePortfolio-Freja-Kindstrand
+# Portfolio-Freja-Kindstrand
 
 ### Python
 1. Python weather-app
