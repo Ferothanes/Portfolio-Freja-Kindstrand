@@ -1,5 +1,12 @@
 # Portfolio-Freja-Kindstrand
 
+
+| My Projects                            | Description                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------ |
+| [Streamlit_dashboard]  | Created a crypto streamlit dashboard, showing:            |
+| [YrkesCo_databas]         | Skapade en databas från grunden. Conceptuel, Logisk & Fysisk datamodellering       |
+| [Python&SQL]  | Showing some fun python code & some SQL scripts       |
+
 ### Python
 1. Python weather-app
 2. API menycode
