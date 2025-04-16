@@ -1,38 +1,29 @@
-# Portfolio-Freja-Kindstrand
+# 👩‍💻 Freja Kindstrand – Project Portfolio
 
+Welcome to my portfolio! Here you'll find a collection of my projects in data engineering, Python, SQL, and more – showcasing both technical depth and collaborative work.
 
-| My Projects                            | Description                                                              |
-| ------------------------------------- | ------------------------------------------------------------------------ |
-| [Streamlit_dashboard]  | Created a crypto streamlit dashboard, showing:            |
-| [YrkesCo_databas]         | Skapade en databas från grunden. Conceptuel, Logisk & Fysisk datamodellering       |
-| [Python&SQL]  | Showing some fun python code & some SQL scripts       |
+---
 
-### Python
-1. Python weather-app
-2. API menycode
-3. plotting
-4. pandas
+## 📂 Projects
 
-### Show SQL
-1. Dbeaver & DuckDB
+| 💡 Project | 📝 Description |
+|-----------|----------------|
+| 🔗 [**Streamlit Dashboard**](./Streamlit_dashboard) | **Kryptokollen**: A real-time data platform and dashboard for live cryptocurrency tracking. Built with Python, APIs, and agile teamwork – focused on clean architecture and tailored for the Nordic market. |
+| 🔗 [**YrkesCo Databas**](./YrkesCo_databas) | Designed a database from scratch: including conceptual, logical, and physical data modeling. |
+| 🔗 [**Python & SQL**](./Python&SQL) *(coming soon)* | A fun collection of Python code snippets and useful SQL scripts for various use cases. |
 
-### Programmering inom data platform development
-1. plotting?
-2. docker (docker image, docker compose)
-3. kafka, postgres, mongodb
+---
 
-### Datamodellering
+## 🧰 Tools & Technologies
 
-### Datavisualisering
+- Python 🐍
+- SQL / PostgreSQL 🛢️
+- Git & GitHub 🔧
+- Streamlit 📊
+- Agile methodology 🧠
 
-### Data warehouse lifecycle 
+---
 
-### Big Data & Cloud
-
-### Automation and devops
-
-### Dataplattformar, maskinlärning & AI
-
-### Examensarbete 
+Feel free to explore the folders above – and reach out if you're curious to know more!
 
 

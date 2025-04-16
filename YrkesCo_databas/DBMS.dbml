@@ -1,0 +1,92 @@
+Table Personuppgifter {
+  Personuppgifter_id serial [pk]
+  Personnummer char(12) [not null, unique]
+  E_post varchar(255) [not null, unique]
+}
+
+Table Adress {
+  Adress_id serial [pk]
+  Gatuadress varchar(100) [not null]
+  Postnummer char(10)
+  Stad varchar(50) [not null]
+  Land varchar(50) [not null]
+}
+
+Table KonsultForetag {
+  KonsultF_id serial [pk]
+  Foretagsnamn varchar(100) [not null]
+  Org_nr varchar(12) [not null, unique]
+  F_skatt boolean [not null]
+  Adress_id int [not null, ref: > Adress.Adress_id]
+}
+
+Table Anlaggning {
+  Anlaggning_id serial [pk]
+  Adress_id int [not null, ref: > Adress.Adress_id]
+}
+
+Table Program {
+  Program_id serial [pk]
+  Programnamn varchar(100) [not null]
+  Anlaggning_id int [not null, ref: > Anlaggning.Anlaggning_id]
+}
+
+Table Konsult {
+  Konsult_id serial [pk]
+  Fornamn varchar(50) [not null]
+  Efternamn varchar(50) [not null]
+  KonsultF_id int [not null, ref: > KonsultForetag.KonsultF_id]
+  ArvodePerTimme decimal(10,2) [not null]
+}
+
+Table UtbildningsLedare {
+  Utbildningsledare_id serial [pk]
+  Fornamn varchar(50) [not null]
+  Efternamn varchar(50) [not null]
+  Personuppgifter_id int [not null, unique, ref: > Personuppgifter.Personuppgifter_id]
+  Konsult_id int [ref: > Konsult.Konsult_id]
+  Konsult boolean [not null]
+}
+
+Table Utbildare {
+  Utbildare_id serial [pk]
+  Fornamn varchar(50) [not null]
+  Efternamn varchar(50) [not null]
+  Personuppgifter_id int [not null, unique, ref: > Personuppgifter.Personuppgifter_id]
+  Konsult_id int [ref: > Konsult.Konsult_id]
+  Konsult boolean [not null]
+}
+
+Table Klass {
+  Klass_id serial [pk]
+  Klassnamn varchar(50) [not null]
+  Program_id int [not null, ref: > Program.Program_id]
+  Utbildningsledare_id int [not null, ref: > UtbildningsLedare.Utbildningsledare_id]
+}
+
+Table Student {
+  Student_id serial [pk]
+  Fornamn varchar(50) [not null]
+  Efternamn varchar(50) [not null]
+  Personuppgifter_id int [not null, unique, ref: > Personuppgifter.Personuppgifter_id]
+  Klass_id int [not null, ref: > Klass.Klass_id]
+}
+
+Table Kurs {
+  Kurs_id serial [pk]
+  Kursnamn varchar(100) [not null]
+  Kurskod varchar(10) [not null, unique]
+  YHP int [not null]
+  Beskrivning varchar(255)
+  Utbildare_id int [not null, ref: > Utbildare.Utbildare_id]
+  AntalVeckor int
+}
+
+Table ProgramKurs {
+  Program_id int [not null, ref: > Program.Program_id]
+  Kurs_id int [not null, ref: > Kurs.Kurs_id]
+
+  Indexes {
+    (Program_id, Kurs_id) [pk]
+  }
+}

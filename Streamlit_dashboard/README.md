@@ -1,76 +1,33 @@
-## 📌 Git Branching Basics
-Branching allows multiple developers to work on different features simultaneously.
+# 🔐 Kryptokollen - Real-Time Crypto Dashboard
 
-### **Create a New Branch**
-```bash
-git branch feature-branch-name  # Creates a new branch
-```
+## 📌 Project Overview
 
-OR create **and switch** to the new branch in one command:
-```bash
-git checkout -b feature-branch-name
-```
+Kryptokollen is a prototype data platform built to stream and visualize live cryptocurrency data in real-time. The product is designed for users in the Nordic region who want to monitor their favorite cryptocurrencies effortlessly through a clean and informative dashboard.
 
-### **List All Branches**
-```bash
-git branch  # Shows all local branches
-```
+This project was developed as part of a Data Engineering program, focusing on collaborative team practices using Git, GitHub, and agile methodologies.
 
-### **Switch Between Branches**
-```bash
-git checkout main  # Switch to the main branch
-git checkout feature-branch-name  # Switch to another branch
-```
+## 🎯 Objectives
 
-### **Delete a Branch**
-```bash
-git branch -d feature-branch-name  # Deletes a branch locally
-```
+- Stream live crypto data using a producer-consumer pipeline.
+- Visualize key metrics through an interactive dashboard.
+- Build a modular and scalable data architecture.
+- Collaborate in a team using GitHub Projects and agile principles.
+- Practice clean code practices and version control in teams.
 
----
+## 🧱 Project Architecture
 
-## 🔄 Keeping Your Branch Updated
-Always **pull the latest changes** before working:
-```bash
-git checkout main
-git pull origin main  # Get the latest updates from the main branch
-```
+- **Producer**: Fetches data from [CoinMarketCap API](https://coinmarketcap.com/api/) at 30–60 second intervals.
+- **Connect API Module**: Reusable code for API requests, separated from the producer logic.
+- **Consumer**: Consumes data and stores/transforms it for dashboard visualization.
+- **Dashboard**: Built using tools like Streamlit or similar to display:
+  - Price (in multiple currencies)
+  - Volume and volume change
+  - Price change
+  - Additional statistics
 
-Then, **rebase or merge** changes into your branch:
-```bash
-git checkout feature-branch-name
-git merge main  # Merges updates from main into your branch
-```
+  ## 🔄 Data Flow
 
----
-
-## 📤 Pushing and Sharing Work
-After making changes, push your branch to GitHub:
-```bash
-git add .  # Stage all changes
-git commit -m "Added new feature"
-git push origin feature-branch-name  # Push changes to GitHub
-```
-
----
-
-## 🔀 Creating a Pull Request (PR)
-1. Go to your repository on **GitHub**.
-2. Click **Pull Requests** → **New Pull Request**.
-3. Select your branch and compare it with `main`.
-4. Add a description and click **Create Pull Request**.
-5. Request reviews from teammates.
-
----
-
-## ✅ Merging & Cleaning Up
-Once your PR is **approved & merged**, delete the branch:
-```bash
-git branch -d feature-branch-name  # Delete locally
-git push origin --delete feature-branch-name  # Delete on GitHub
-```
-
-
-
-
-
+1. **Producer** pulls data from CoinMarketCap API.
+2. **Connect API Module** handles all HTTP requests.
+3. **Consumer** ingests and processes the data.
+4. **Dashboard** displays the processed data in real-time.
