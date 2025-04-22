@@ -4,5 +4,5 @@ A playful Python script that simulates an ETL (Extract, Transform, Load) pipelin
 ## 🧠 **SQL Analytics:** 
 A set of SQL queries that analyze the caught Pokémon using SQLite. This includes aggregations and filtering.
 
-![Pikachu](./python_and_sql/data/pikachu.png)
+![Pikachu](data/pikachu.png)
 
