@@ -1,10 +1,8 @@
-# 👩‍💻 Welcome to my portfolio! 
+## Welcome to my portfolio! 
 
-### Here you'll find a collection of my projects in data engineering. The repository showcases projects and workflows built using a variety of modern data and development tools. Below you can find some of my projects and a short summary of the primary tools used.
+#### Here you'll find a collection of my projects in data engineering. The repository showcases projects and workflows built using a variety of modern data and development tools. Below you can find some of my projects and a short summary of the primary tools used.
 
 
-
-## 📂 Projects
 
 | 💡 Project | 📝 Description |
 |-----------|----------------|
@@ -17,7 +15,7 @@
 
 ---
 
-## Core Tools
+### Core Tools
 
 - **Python** — Main programming language and ecosystem (including `pandas`, `numpy`, `matplotlib`, etc.).
 - **SQL (Postgres / SQLite)** — Database scripts, queries, and ETL workflows integrated with Python.
