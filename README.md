@@ -7,8 +7,9 @@
 | 💡 Project | 📝 Description |
 |-----------|----------------|
 | 🔗 [**Kryptokollen**](./Streamlit_dashboard) | A real-time data platform and dashboard for live cryptocurrency tracking. Focused on singular target symbol, clean architecture and tailored for the Nordic market. |
-| 🔗 [**YrkesCo Databas**](./YrkesCo_databas) | Designed a database from scratch: including conceptual, logical, and physical data modeling. |
+| 🔗 [**YrkesCo Database**](./YrkesCo_databas) | Designed a database from scratch: including conceptual, logical, and physical data modeling. |
 | 🔗 [**YH-Kollen**](./YH-Kollen) | This project contains a small interactive data dashboard built with Taipy GUI and Plotly. It visualizes national YH (yrkeshögskola) statistics — applications, student counts and demographic breakdowns |
+| 🔗 [**Snowflake Warehouse**](./Snowflake_Warehouse)  | This project implements an ETL pipeline to extract job market data from Arbetsförmedlingen’s Jobtech API, transform and model it in Snowflake, and visualize it in an interactive Streamlit dashboard. |
 | 🔗 [**Python & SQL**](./Python_&_SQL) |  ETL pipeline that extracts Pokémon data from an API, transforms it, and analyzes it with SQL queries in SQLite.  |
 | 🔗 [**Machine Learning & AI**] *(coming soon)* | Focuses on machine learning algorithms and AI models, including data preprocessing, training, and evaluation — built to solve real-world problems with data-driven insights. |
 

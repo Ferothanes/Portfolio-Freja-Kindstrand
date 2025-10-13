@@ -1,0 +1,3 @@
+[submodule "Snowflake_Warehouse"]
+	path = Snowflake_Warehouse
+	url = https://github.com/Ferothanes/CLOUD_WH_project.git
