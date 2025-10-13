@@ -12,4 +12,7 @@ Designed a database for YrkesCo, a vocational college, to replace scattered Exce
 ### **Outcome:**
 Efficient, secure, and scalable data management solution for multiple locations with future expansion capability. Demonstrates data modeling, SQL, and database design skills for portfolio purposes.
 
-![alt text](image.png)
+---
+### *The logical data model*
+
+![alt text](image-1.png)
