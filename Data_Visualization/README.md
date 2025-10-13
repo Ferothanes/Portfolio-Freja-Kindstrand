@@ -1,29 +1,17 @@
-# Datavisualisering_Gruppprojekt
+# Welcome to YH-Kollen
 
-- git branch              # List local branches
-- git branch -r           # List remote branches
-- git branch -a           # List all branches (local + remote)
-- git status
+Here you’ll find **filterable information** on approved courses, programs, educational fields, government funding levels, and more.
 
-🌿 Create a New Branch
-- git checkout -b branch-name
+---
 
-🔁 Switch Between Branches
-- git checkout branch-name
+## About YH-Kollen
 
-🔼 Push/Pull a New Branch to GitHub
-- git push -u origin branch-name
-- git pull origin branch-name
+YH-Kollen is a **data-driven decision support tool** developed for the education provider **The Skool**.  
+This interactive platform offers a clear overview of **vocational higher education programs in Sweden**, based on data from sources such as the **Swedish National Agency for Higher Vocational Education (MYH)** and **Statistics Sweden (SCB)**.
 
+**The goal of this project is to:**
 
-🧬 Merge a Branch into Another (e.g., feature into main)
-- git checkout main
-- git pull origin main           # Always pull the latest version first
-- git checkout main
-
-- git branch -d branch-name      # Safe delete (won't delete if not merged)
-- git branch -D branch-name      # Force delete
-
-
-
-
+- Help educational leaders and staff make **informed decisions**.  
+- **Visualize trends and application data** for both programs and individual courses.  
+- Enable **filtering by education provider, geographic region, and program type**.  
+- Provide a **comprehensive view** of how programs align with the labor market and how government funding is allocated.
