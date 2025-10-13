@@ -1,8 +1,8 @@
-# 👩‍💻 Freja Kindstrand – Project Portfolio
+# 👩‍💻 Welcome to my portfolio! 
 
-Welcome to my portfolio! Here you'll find a collection of my projects in data engineering, Python, SQL, and more – showcasing both technical depth and collaborative work.
+### Here you'll find a collection of my projects in data engineering. The repository showcases projects and workflows built using a variety of modern data and development tools. Below you can find some of my projects and a short summary of the primary tools used.
 
----
+
 
 ## 📂 Projects
 
@@ -14,15 +14,20 @@ Welcome to my portfolio! Here you'll find a collection of my projects in data en
 | 🔗 [**Python & SQL**](./Python_&_SQL) |  ETL pipeline that extracts Pokémon data from an API, transforms it, and analyzes it with SQL queries in SQLite.  |
 | 🔗 [**Machine Learning & AI**] *(coming soon)* | Focuses on machine learning algorithms and AI models, including data preprocessing, training, and evaluation — built to solve real-world problems with data-driven insights. |
 
+
 ---
 
-## 🧰 Tools & Technologies
+## Core Tools
 
-- Python 🐍
-- SQL / PostgreSQL 🛢️
-- Git & GitHub 🔧
-- Streamlit 📊
-- Agile methodology 🧠
+- **Python** — Main programming language and ecosystem (including `pandas`, `numpy`, `matplotlib`, etc.).
+- **SQL (Postgres / SQLite)** — Database scripts, queries, and ETL workflows integrated with Python.
+- **Streamlit** — Framework for building dashboards and interactive apps
+- **Taipy & DuckDB** — Utilized in `Data_Visualization` for analytics and dashboard creation.
+- **Docker & Docker Compose** — Orchestration for services and local environment management.
+- **PostgreSQL** — Relational database used in Docker setups and the `YrkesCo_databas` project.
+- **Apache Kafka / Confluent Platform** — Streaming infrastructure for real-time data (includes broker, Schema Registry, Control Center).
+- **Git & GitHub** — Source control and repository hosting.
+- **Jupyter / IPython** — Interactive notebooks and kernels for exploration and prototyping.
 
 ---
 
