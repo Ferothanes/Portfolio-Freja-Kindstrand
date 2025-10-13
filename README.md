@@ -27,6 +27,9 @@
 - **Apache Kafka / Confluent Platform** — Streaming infrastructure for real-time data (includes broker, Schema Registry, Control Center).
 - **Git & GitHub** — Source control and repository hosting.
 - **Jupyter / IPython** — Interactive notebooks and kernels for exploration and prototyping.
+- **dbt** — transformation, modeling and testing.  
+- **DLT** — ETL ingestion.  
+- **Snowflake** — For storing and modeling data.  
 
 ---
 
