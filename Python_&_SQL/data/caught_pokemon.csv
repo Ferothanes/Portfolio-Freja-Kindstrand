@@ -14,3 +14,8 @@ id,name,height,weight,types
 143,snorlax,21,4600,normal
 78,rapidash,17,950,fire
 11,metapod,7,99,bug
+35,clefairy,6,75,fairy
+17,pidgeotto,11,300,"normal, flying"
+24,arbok,35,650,poison
+37,vulpix,6,99,fire
+13,weedle,3,32,"bug, poison"
