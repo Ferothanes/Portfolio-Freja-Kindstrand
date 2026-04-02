@@ -6,12 +6,14 @@
 
 | 💡 Project | 📝 Description |
 |-----------|----------------|
+| 🔗 [**Python & SQL**](./Python_&_SQL) |  ETL pipeline that extracts Pokémon data from an API, transforms it, and analyzes it with SQL queries in SQLite.  |
+| 🔗 [**Global News Data Pipeline & Dashboard**](https://github.com/Ferothanes/Examensarbete) | Built a data pipeline that ingests and transforms global news data (EventRegistry, GDELT), stores it in DuckDB, and serves insights through a Streamlit dashboard, orchestrated with Dagster. |
 | 🔗 [**Kryptokollen**](./Streamlit_dashboard) | A real-time data platform and dashboard for live cryptocurrency tracking. Focused on singular target symbol, clean architecture and tailored for the Nordic market. |
-| 🔗 [**YrkesCo Database**](./YrkesCo_databas) | Designed a database from scratch: including conceptual, logical, and physical data modeling. |
+| 🔗 [**YrkesCo Database**](./YrkesCo_databas) | Designed a relational database using ER modeling, including conceptual, logical, and physical schema design with defined entities, relationships, and constraints. |
 | 🔗 [**YH-Kollen**](./YH-Kollen) | This project contains a small interactive data dashboard built with Taipy GUI and Plotly. It visualizes national YH (yrkeshögskola) statistics — applications, student counts and demographic breakdowns |
 | 🔗 [**Snowflake Warehouse**](./Snowflake_Warehouse)  | This project implements an ETL pipeline to extract job market data from Arbetsförmedlingen’s Jobtech API, transform and model it in Snowflake, and visualize it in an interactive Streamlit dashboard. |
-| 🔗 [**Python & SQL**](./Python_&_SQL) |  ETL pipeline that extracts Pokémon data from an API, transforms it, and analyzes it with SQL queries in SQLite.  |
-| 🔗 [**Machine Learning & AI**](https://github.com/Ferothanes/MachineLearning_Project) | Focuses on machine learning algorithms and AI models, including data preprocessing, training, and evaluation — built to solve real-world problems with data-driven insights. |
+| 🔗 [**Machine Learning & AI**](https://github.com/Ferothanes/MachineLearning_Project) | RAG-based AI application with a Streamlit frontend and Azure backend, using vector search (LanceDB) and Gemini to retrieve and generate answers from transcript data. |
+
 
 
 ---
