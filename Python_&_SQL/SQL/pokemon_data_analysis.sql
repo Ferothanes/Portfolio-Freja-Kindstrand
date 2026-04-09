@@ -8,26 +8,49 @@ CREATE TABLE pokemon (
     types TEXT
 );
 
--- 2. Import data from CSV (SQLite-specific)
--- NOTE: You need to be in the SQLite CLI and run: .mode csv
--- Then run: .import 'python/data/caught_pokemon.csv' pokemon
+-- Import from SQLite CLI:
+-- .mode csv
+-- .import 'data/caught_pokemon.csv' pokemon
 
--- 3. Query: Get all Pokémon heavier than 100kg
-SELECT id, name, weight
+-- Heaviest Pokemon
+SELECT id, name, weight, types
 FROM pokemon
-WHERE weight > 100
-ORDER BY weight DESC;
+ORDER BY weight DESC
+LIMIT 5;
 
--- 4. Query: Count Pokémon by type
-SELECT 
-    types,
-    COUNT(*) AS count
-FROM pokemon
-GROUP BY types
-ORDER BY count DESC;
-
--- 5. Query: Find the tallest Pokémon
-SELECT name, height
+-- Tallest Pokemon
+SELECT id, name, height, types
 FROM pokemon
 ORDER BY height DESC
-LIMIT 1;
+LIMIT 5;
+
+-- Count how often each Pokemon appears
+SELECT
+    name,
+    COUNT(*) AS catches
+FROM pokemon
+GROUP BY name
+ORDER BY catches DESC, name ASC;
+
+-- Count Pokemon by type using a recursive CTE to split multi-type values
+WITH RECURSIVE split_types (pokemon_name, type_name, remaining) AS (
+    SELECT
+        name,
+        TRIM(SUBSTR(types, 1, INSTR(types || ',', ',') - 1)),
+        LTRIM(SUBSTR(types || ',', INSTR(types || ',', ',') + 1))
+    FROM pokemon
+    UNION ALL
+    SELECT
+        pokemon_name,
+        TRIM(SUBSTR(remaining, 1, INSTR(remaining, ',') - 1)),
+        LTRIM(SUBSTR(remaining, INSTR(remaining, ',') + 1))
+    FROM split_types
+    WHERE remaining <> ''
+)
+SELECT
+    type_name,
+    COUNT(*) AS catches
+FROM split_types
+WHERE type_name <> ''
+GROUP BY type_name
+ORDER BY catches DESC, type_name ASC;

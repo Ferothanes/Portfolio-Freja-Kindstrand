@@ -19,3 +19,9 @@ id,name,height,weight,types
 24,arbok,35,650,poison
 37,vulpix,6,99,fire
 13,weedle,3,32,"bug, poison"
+132,ditto,3,40,normal
+94,gengar,15,405,"ghost, poison"
+19,rattata,3,35,normal
+146,moltres,20,600,"fire, flying"
+123,scyther,15,560,"bug, flying"
+130,gyarados,65,2350,"water, flying"
