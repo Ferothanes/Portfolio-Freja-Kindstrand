@@ -2,6 +2,10 @@
 
 A playful portfolio project that shows Python and SQL comprehension through a Pokemon-themed ETL pipeline and dashboard.
 
+## Dashboard preview
+
+![Pokemon ETL Dashboard preview](./images/pokemon-dashboard-preview.png)
+
 ## What it does
 
 - Extracts random Pokemon from the PokéAPI with Python

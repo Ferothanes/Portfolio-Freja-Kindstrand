@@ -1,3 +1,4 @@
+import base64
 import sqlite3
 import time
 from pathlib import Path
@@ -13,6 +14,7 @@ PAGE_TITLE = "Pokemon ETL Dashboard"
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 POKEMON_IMAGE = DATA_DIR / "pikachuu.png"
+POKEDEX_HEADER_IMAGE = Path(r"c:\Users\Freja\Downloads\ChatGPT Image Apr 9, 2026, 04_52_48 PM.png")
 POKEDEX_IMAGE_DIR = DATA_DIR / "pokedex_images"
 POKEDEX_CACHE_PATH = DATA_DIR / "pokedex_cache.csv"
 POKEDEX_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7
@@ -308,19 +310,6 @@ def render_stat_bars(pokemon):
     return "".join(stat_rows)
 
 
-def render_hardware_lights():
-    return """
-    <div class='hardware-lights'>
-        <div class='main-light'></div>
-        <div class='light-group'>
-            <div class='tiny-light yellow'></div>
-            <div class='tiny-light green'></div>
-            <div class='tiny-light blue'></div>
-        </div>
-    </div>
-    """
-
-
 def render_pokedex_buttons():
     return """
     <div class='hardware-bottom'>
@@ -337,6 +326,18 @@ def render_pokedex_buttons():
         </div>
     </div>
     """
+
+
+def render_responsive_header_image(image_path):
+    if not image_path.exists():
+        return ""
+
+    encoded_image = base64.b64encode(image_path.read_bytes()).decode("ascii")
+    return (
+        "<div class='pokedex-header-art'>"
+        f"<img src='data:image/png;base64,{encoded_image}' alt='Pokedex header artwork' />"
+        "</div>"
+    )
 
 
 st.markdown(
@@ -464,50 +465,39 @@ st.markdown(
         margin-bottom: 0.35rem;
     }
     .pokedex-shell {
-        background: linear-gradient(180deg, #d93b33 0%, #bf2d28 100%);
+        background: transparent;
         border-radius: 34px;
-        padding: 1rem 1.2rem 1rem 1.2rem;
-        box-shadow: 0 22px 40px rgba(110, 20, 18, 0.22);
-        border: 6px solid #9f1f1b;
+        padding: 0;
+        box-shadow: none;
+        border: none;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
     }
     .pokedex-screen {
-        background: linear-gradient(180deg, #1d2a3c 0%, #13202f 100%);
-        border-radius: 26px;
-        padding: 1rem;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
         min-height: 100%;
-        border: 3px solid #99d9ea;
-        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.06);
+        border: none;
+        box-shadow: none;
     }
-    .hardware-lights {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-bottom: 0.55rem;
-        position: relative;
-        z-index: 2;
+    .pokedex-header-art {
+        display: block;
+        margin: 0 0 0.9rem 0;
     }
-    .main-light {
-        width: 68px;
-        height: 68px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 35% 35%, #dff7ff 0%, #8ae1ff 25%, #2da9e7 55%, #1d5faa 100%);
-        border: 6px solid #f3f6f9;
-        box-shadow: 0 0 0 6px #1f5a8b, 0 0 28px rgba(100, 217, 255, 0.55);
+    .pokedex-header-art img {
+        display: block;
+        width: 100%;
+        max-width: calc(100% - 4.8rem);
+        min-width: 280px;
+        height: auto;
     }
-    .light-group { display: flex; gap: 0.7rem; }
-    .tiny-light {
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        border: 2px solid rgba(0,0,0,0.25);
-        box-shadow: inset 0 2px 4px rgba(255,255,255,0.35);
+    @media (max-width: 900px) {
+        .pokedex-header-art img {
+            max-width: calc(100% - 1.5rem);
+            min-width: 0;
+        }
     }
-    .tiny-light.yellow { background: #ffd34d; }
-    .tiny-light.green { background: #60d394; }
-    .tiny-light.blue { background: #5dade2; }
     .screen-label, .hero-kicker {
         color: #d14b15;
         font-size: 0.9rem;
@@ -1000,7 +990,8 @@ if page == "Pokedex Device":
 
         with shell_col:
             st.markdown("<div class='pokedex-shell'>", unsafe_allow_html=True)
-            st.markdown(render_hardware_lights(), unsafe_allow_html=True)
+            if POKEDEX_HEADER_IMAGE.exists():
+                st.markdown(render_responsive_header_image(POKEDEX_HEADER_IMAGE), unsafe_allow_html=True)
             st.markdown("<div class='pokedex-screen'>", unsafe_allow_html=True)
             st.markdown(
                 "<div class='device-meta'>"
